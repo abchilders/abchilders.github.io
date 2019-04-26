@@ -1,0 +1,58 @@
+/*  Alex Childers
+	Last modified: 2019/03/08
+*/
+
+body
+{
+	font-family: Verdana, Trebuchet, sans-serif; 
+}
+
+p
+{
+	margin: 1em; 
+}
+
+h1
+{
+	margin: 1em; 
+	text-align: center; 
+}
+
+table, td, th
+{
+	border: 0.5em ridge #003300; 
+	border-collapse: collapse; 
+	margin: 1em; 
+	padding: 0.5em; 
+}
+
+table
+{
+	/* centers the table on the page */
+	width: 80%; 
+	margin-left: auto; 
+	margin-right: auto; 
+}
+
+caption
+{
+	border: 0.4em outset #003300; 
+	margin: 0.5em; 
+	padding: 0.3em;
+}
+
+tr:hover
+{
+	background-color: #f6fef6;
+}
+
+.rank
+{
+	text-align: center; 
+}
+
+#sleeve_photo
+{
+	padding: 0.2em; 
+	text-align: center; 
+}
