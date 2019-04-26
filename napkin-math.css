@@ -1,0 +1,49 @@
+/* Alex Childers
+   Last modified: 2019/04/25
+*/
+
+h1, h2
+{
+	text-align: center; 
+}
+
+p
+{
+	width: 80%;
+	margin-left: auto; 
+	margin-right: auto; 
+}
+
+.snapchat_visual img, .snapchat_visual video
+{
+	display: block; 
+	
+	/* 90 vh means the image takes up 90% of the viewport's height*/
+	height: 90vh; 
+	margin-left: auto; 
+	margin-right: auto; 
+}
+
+#to_top
+{
+	background-color: #f8f8ff;
+	border: 0.1em inset #4c4c4c; 
+	color: #4c4c4c; 
+	position: fixed; 
+	bottom: 1em;
+	right: 1em; 
+	text-align: right; 
+	width: auto; 
+	padding: 0.5em; 
+}
+
+#to_top a:link
+{
+	text-decoration: none; 
+}
+
+#to_top a:visited
+{
+	text-deocration: none; 
+	color: #4c4c4c; 
+}
