@@ -1,0 +1,41 @@
+/* Styles for abchilders.github.io/index.html */
+
+/* import fonts */
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap');
+
+html
+{
+	background: linear-gradient(#FFFFFF, #FFFFE9) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+h1
+{
+	font-family: 'Josefin Sans', sans-serif; 
+	font-size: 4em; 
+	margin: 0.5em; 
+	text-align: center; 
+	text-transform: lowercase; 
+}
+
+hr
+{
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+ul
+{
+	list-style-type: none; 
+	font-family: 'Trebuchet MS', Helvetica, sans-serif; 
+	font-size: 1.3em; 
+}
+
+ul li
+{
+	margin: 1em; 
+}
