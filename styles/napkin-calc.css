@@ -1,0 +1,164 @@
+/* 	Alex Childers
+	Last modified: 2019/04/28
+*/ 
+
+/* color scheme:
+	#223843 = japanese indigo (navy blue)
+	#F4F7F9 = anti-flash white (off-white)
+	#DBD3D8 = timberwolf (pink lilac)
+	#D8B4A0 = pastel pink (nude lipstick pink) 
+	#D77A61 = terra cotta (dark salmon) 
+*/
+
+/* import sans-serif font */
+@import url('https://fonts.googleapis.com/css?family=Heebo');
+
+aside
+{
+	font-size: 0.8em; 
+	margin-top: 2em; 
+	margin-bottom: 2em; 
+}
+
+body
+{
+	background-color: #F4F7F9;
+	color: #223843; 
+	font-family: 'Heebo', 'Arial', sans-serif; 
+	margin: 0; 
+}
+
+#calculate
+{
+	grid-column: 1 / span 2; 
+	grid-row: 5;
+	padding: 0.5em; 
+	text-align: center; 
+}
+
+.content
+{
+	margin: 2em; 
+}
+
+#folds
+{
+	grid-column: 2; 
+	grid-row: 4; 
+}
+
+.header
+{
+	background-color: #DBD3D8;
+	border-bottom: 0.2em solid #D77A61; 
+	font-weight: bolder; 
+	margin: 0; 
+	padding: 0.5em; 
+	text-align: center;
+}
+
+h1.header
+{
+	font-size: 3em; 
+}
+
+h2.header
+{
+	font-size: 1em; 
+}
+
+input, label
+{
+	text-align: right; 
+}
+
+#inputs
+{
+	background-color: #DBD3D8; 
+	border: 0.1em solid #D77A61;
+	display: grid;
+	font-weight: bold; 
+	font-size: 1em; 
+	grid-auto-rows: minmax(2em, auto); 
+	grid-template-columns: 35% 65%; 
+	margin-left: auto; 
+	margin-right: auto; 
+	max-width: 50em; 
+	padding: 1em; 
+	text-align: center; 
+}
+
+#inputs *
+{
+	margin: 0.5em; 
+}
+
+label[for="folds"]
+{
+	grid-column: 1; 
+	grid-row: 4; 
+}
+
+label[for="length"]
+{
+	grid-column: 1; 
+	grid-row: 1; 
+}
+
+label[for="units"]
+{
+	grid-column: 1; 
+	grid-row: 3; 
+}
+
+label[for="width"]
+{
+	grid-column: 1; 
+	grid-row: 2; 
+}
+
+#length
+{
+	grid-column: 2; 
+	grid-row: 1; 
+}
+
+#message
+{
+	font-size: 1.2em; 
+}
+
+#percentage, #surfaceArea
+{
+	font-weight: bold; 
+	font-size: 3em; 
+}
+
+#result
+{
+	text-align: center; 
+	margin: 1em; 
+}
+
+#result span
+{
+	display: block; 
+}
+
+#stats
+{
+	border: 0.1em solid #D77A61;
+	padding: 1em; 
+}
+
+#units
+{
+	grid-column: 2; 
+	grid-row: 3; 
+}
+
+#width
+{
+	grid-column: 2; 
+	grid-row: 2; 
+}
