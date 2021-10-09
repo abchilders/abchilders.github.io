@@ -39,22 +39,26 @@ function checkToneNeeded() {
         // if the last character entered was one of the tone numbers/chars, 
         // replace it with its corresponding HTML character 
         if (TONE_CHARS.find(char => char === entered_char)) {
-            // special dum-dum rule because I couldn't figure out a better work-
-            // around: if you press "-"" twice in a row it should replace the 
-            // tone mark on the previous character with an actual "-" char to 
-            // allow folks to type syllable separations
+            // special rule because I couldn't figure out a better work-around: 
+            // if you press "-"" twice in a row it should replace the tone mark 
+            // on the previous character with an actual "-" char to allow folks 
+            // to type syllable separations
             if ((entered_char === "-") && (contents.length > 1) && (contents[entered_char_index-1] === TONE_UTF_CODES["-"])) {
                 element.value = contents.substring(0, entered_char_index - 1) + contents.substring(entered_char_index); 
+
+                // reset cursor position to where it was -1 to compensate for char replacement
+                element.selectionStart = caret_position - 1; 
+                element.selectionEnd = caret_position - 1; 
             }
 
             // normal case - replace the entered char with its tone mark
             else {
                 element.value = contents.substring(0, entered_char_index) + TONE_UTF_CODES[entered_char] + contents.substring(entered_char_index + 1);
+
+                // cursor position will have reset, so I'll put cursor position back where it was before :) 
+                element.selectionStart = caret_position; 
+                element.selectionEnd = caret_position; 
             }
-            
-            // cursor position will have reset, so I'll put cursor position back where it was before :) 
-            element.selectionStart = caret_position; 
-            element.selectionEnd = caret_position; 
         } 
     }
 
