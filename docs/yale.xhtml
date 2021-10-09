@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Yale Typer</title>
+  <meta charset="utf-8" />
+
+  <link href="../styles/normalize.css" 
+          type="text/css" rel="stylesheet" />
+    <link href="../styles/yale.css"
+          type="text/css" rel="stylesheet" />
+
+  <script src="../javascript/yale.js" type="text/javascript" async="async">
+  </script>
+</head>
+
+<body>
+    <h1>Yale Romanization for Cantonese Typer</h1>
+
+    <p>To use: Type your Yale words in the text box below. To generate tone 
+        marks, click the buttons above the text box, OR type a number after a 
+        letter to modify it:
+        <ul>
+            <li>Level tone: 1 or -</li>
+            <li>Rising tone: 2 or /</li>
+            <li>Falling tone: 3 or \</li>
+        </ul>
+    </p>
+
+    <p>Examples:
+        <ul>
+            <li>Level tone: type "ne1" or "ne-" to get "nē"</li>
+            <li>Rising tone: type "ga2m" or "ga/m" to get "gám"</li>
+            <li>Falling tone: type "m3h" or "m\h" to get "m̀h"</li>
+        </ul>
+    </p>
+
+    <!-- for each letter that might have a tone, it'll be dynamically added from
+    JS just in case I mess up and forget a letter that's tone-able -->
+    <div id="button_div"></div>
+
+    <!-- JS will modify letters here -->
+    <textarea id="text_input" placeholder="Type here"></textarea>
+	
+	<div id="footer">
+		<hr />
+		
+		<p>
+			Got complaints or suggestions? <a href="mailto:abc66@humboldt.edu?subject=Yale%20Romanization%20Typer%20comment">Contact me</a>, <a href="https://github.com/abchilders/abchilders.github.io/issues">create a suggestion or bug report</a>, or write your own code and make a <a href="https://github.com/abchilders/abchilders.github.io/pulls">pull request</a>!
+		</p>
+	</div>
+</body>
+
+</html>

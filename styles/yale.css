@@ -1,0 +1,15 @@
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+textarea {
+    margin: auto; 
+    width: 90%;
+    height: 50%; 
+	min-height: 3em; 
+}
+
+#footer {
+	margin-top: 2em; 
+}
