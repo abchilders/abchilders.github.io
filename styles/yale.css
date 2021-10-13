@@ -13,3 +13,12 @@ textarea {
 #footer {
 	margin-top: 2em; 
 }
+
+noscript {
+    font-weight: bold;
+    font-size: 2em;  
+    color: darkred;
+    padding: 1em; 
+    border: 1px solid black; 
+    display: block; 
+}
