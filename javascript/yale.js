@@ -39,16 +39,27 @@ function checkToneNeeded() {
         // if the last character entered was one of the tone numbers/chars, 
         // replace it with its corresponding HTML character 
         if (TONE_CHARS.find(char => char === entered_char)) {
-            // special rule because I couldn't figure out a better work-around: 
-            // if you press "-"" twice in a row it should replace the tone mark 
-            // on the previous character with an actual "-" char to allow folks 
-            // to type syllable separations
-            if ((entered_char === "-") && (contents.length > 1) && (contents[entered_char_index-1] === TONE_UTF_CODES["-"])) {
+            // special rule #1: 
+            // if you press -, /, or \ twice in a row it should replace the tone mark 
+            // on the previous character with the actual char
+            if (/*(entered_char === "-") &&*/ (contents.length > 1) && (contents[entered_char_index-1] === TONE_UTF_CODES[entered_char])) {
                 element.value = contents.substring(0, entered_char_index - 1) + contents.substring(entered_char_index); 
 
                 // reset cursor position to where it was -1 to compensate for char replacement
                 element.selectionStart = caret_position - 1; 
                 element.selectionEnd = caret_position - 1; 
+            }
+
+            // special rule #2: 
+            // pressing -, /, or \ three times in a row means you get both the 
+            // tone mark AND the escaped character
+            else if((contents.length > 1) && (contents[entered_char_index-1] === entered_char)) {
+                // tone mark is inserted 2 indices before the entered char, and one of the normal chars is erased 
+                element.value = contents.substring(0, entered_char_index - 1) + TONE_UTF_CODES[entered_char] +contents.substring(entered_char_index); 
+
+                // reset cursor position 
+                element.selectionStart = caret_position; 
+                element.selectionEnd = caret_position; 
             }
 
             // normal case - replace the entered char with its tone mark
