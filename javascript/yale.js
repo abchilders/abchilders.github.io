@@ -42,7 +42,7 @@ function checkToneNeeded() {
             // special rule #1: 
             // if you press -, /, or \ twice in a row it should replace the tone mark 
             // on the previous character with the actual char
-            if (/*(entered_char === "-") &&*/ (contents.length > 1) && (contents[entered_char_index-1] === TONE_UTF_CODES[entered_char])) {
+            if ((contents.length > 1) && (contents[entered_char_index-1] === TONE_UTF_CODES[entered_char])) {
                 element.value = contents.substring(0, entered_char_index - 1) + contents.substring(entered_char_index); 
 
                 // reset cursor position to where it was -1 to compensate for char replacement
